@@ -10,6 +10,7 @@ SMAC:https://arxiv.org/abs/1902.04043
 ```
 python run.py
 ```
+Parameters can be changed in alg_parameters.py and env_parameters.py
 
 ## Reference
 This library is derived from offcial implment of SchedNet:https://github.com/rhoowd/sched_net
