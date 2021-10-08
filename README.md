@@ -3,11 +3,12 @@ tensorflow 1 implementations SchedNet on SMAC(the decentralised micromanagement 
 
 ## Corresponding Papers
 SchedNet:https://arxiv.org/abs/1902.01554
+
 SMAC:https://arxiv.org/abs/1902.04043
 
 ## How to run the code
 ```
-python enjoy_play.py
+python run.py
 ```
 
 ## Reference
