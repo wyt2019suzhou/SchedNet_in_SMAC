@@ -13,6 +13,6 @@ python run.py
 Parameters can be changed in alg_parameters.py and env_parameters.py
 
 ## Reference
-This library is derived from offcial implment of SchedNet:https://github.com/rhoowd/sched_net
+This library is derived from the offcial implment of SchedNet:https://github.com/rhoowd/sched_net
 
 PPO:https://github.com/openai/baselines
