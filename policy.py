@@ -61,7 +61,7 @@ class Policy(object):
     def get_schedule(self,observation):
         feed_dict = {self.obs: observation}
         priority=self.sess.run(self.schedule_policy, feed_dict)
-        schedule_idx = np.argsort(-priority)[:,s_num]
+        schedule_idx = np.argsort(-priority)[:,:s_num]
         ret = np.zeros((self.batch_size,N_AGENTS))
         for i in range(self.batch_size):
             ret[i,schedule_idx[i]] = 1.0

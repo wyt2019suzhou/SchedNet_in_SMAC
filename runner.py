@@ -76,7 +76,8 @@ class Runner(object):
         mb_schedule_n = np.asarray(mb_schedule_n)
         mb_ps=np.asarray(mb_ps)
         # calculate advantages
-        last_values,last_sch_value = self.model.value(self.state,priority)
+        last_schedule_n, last_priority = self.model.act_model.get_schedule(self.obs)  # correct
+        last_values,last_sch_value = self.model.value(self.state,last_priority)  # [env,agent]
         mb_advs = np.zeros_like(mb_rewards)
         mb_sch_advs = np.zeros_like(mb_rewards)
         lastgaelam,lastgaelam_sch = 0,0

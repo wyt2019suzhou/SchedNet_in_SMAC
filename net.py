@@ -36,7 +36,8 @@ class Net(object):
         for i in range(N_AGENTS):
             name=name+str(i)
             with tf.variable_scope(name, reuse=tf.AUTO_REUSE):
-                masked_msg = tf.boolean_mask(encoder,tf.cast(schedule, tf.bool),axis=0)
+                masked_msg = tf.boolean_mask(tf.reshape(encoder, [-1, capacity]), tf.reshape(tf.cast(schedule, tf.bool), [-1]))
+                masked_msg=tf.reshape(masked_msg, [-1,  s_num*capacity], name='scheduled')
                 reshaped_messages.append(masked_msg)
         return tf.stack(reshaped_messages, 1)
 
